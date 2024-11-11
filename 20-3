@@ -1,0 +1,82 @@
+//States/Capitols displayed randomly
+import java.util.Scanner;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pe20 {
+    public static void main(String[] args) {
+        List<String[]> stateCapital = new ArrayList<>();
+        stateCapital.add(new String[]{"Alabama", "Montgomery"});
+        stateCapital.add(new String[]{"Alaska", "Juneau"});
+        stateCapital.add(new String[]{"Arizona", "Phoenix"});
+        stateCapital.add(new String[]{"Arkansas", "Little Rock"});
+        stateCapital.add(new String[]{"California", "Sacramento"});
+        stateCapital.add(new String[]{"Colorado", "Denver"});
+        stateCapital.add(new String[]{"Connecticut", "Hartford"});
+        stateCapital.add(new String[]{"Delaware", "Dover"});
+        stateCapital.add(new String[]{"Florida", "Tallahassee"});
+        stateCapital.add(new String[]{"Georgia", "Atlanta"});
+        stateCapital.add(new String[]{"Hawaii", "Honolulu"});
+        stateCapital.add(new String[]{"Idaho", "Boise"});
+        stateCapital.add(new String[]{"Illinois", "Springfield"});
+        stateCapital.add(new String[]{"Indiana", "Indianapolis"});
+        stateCapital.add(new String[]{"Iowa", "Des Moines"});
+        stateCapital.add(new String[]{"Kansas", "Topeka"});
+        stateCapital.add(new String[]{"Kentucky", "Frankfort"});
+        stateCapital.add(new String[]{"Louisiana", "Baton Rouge"});
+        stateCapital.add(new String[]{"Maine", "Augusta"});
+        stateCapital.add(new String[]{"Maryland", "Annapolis"});
+        stateCapital.add(new String[]{"Massachusetts", "Boston"});
+        stateCapital.add(new String[]{"Michigan", "Lansing"});
+        stateCapital.add(new String[]{"Minnesota", "Saint Paul"});
+        stateCapital.add(new String[]{"Mississippi", "Jackson"});
+        stateCapital.add(new String[]{"Missouri", "Jefferson City"});
+        stateCapital.add(new String[]{"Montana", "Helena"});
+        stateCapital.add(new String[]{"Nebraska", "Lincoln"});
+        stateCapital.add(new String[]{"Nevada", "Carson City"});
+        stateCapital.add(new String[]{"New Hampshire", "Concord"});
+        stateCapital.add(new String[]{"New Jersey", "Trenton"});
+        stateCapital.add(new String[]{"New York", "Albany"});
+        stateCapital.add(new String[]{"New Mexico", "Santa Fe"});
+        stateCapital.add(new String[]{"North Carolina", "Raleigh"});
+        stateCapital.add(new String[]{"North Dakota", "Bismarck"});
+        stateCapital.add(new String[]{"Ohio", "Columbus"});
+        stateCapital.add(new String[]{"Oklahoma", "Oklahoma City"});
+        stateCapital.add(new String[]{"Oregon", "Salem"});
+        stateCapital.add(new String[]{"Pennsylvania", "Harrisburg"});
+        stateCapital.add(new String[]{"Rhode Island", "Providence"});
+        stateCapital.add(new String[]{"South Carolina", "Columbia"});
+        stateCapital.add(new String[]{"South Dakota", "Pierre"});
+        stateCapital.add(new String[]{"Tennessee", "Nashville"});
+        stateCapital.add(new String[]{"Texas", "Austin"});
+        stateCapital.add(new String[]{"Utah", "Salt Lake City"});
+        stateCapital.add(new String[]{"Vermont", "Montpelier"});
+        stateCapital.add(new String[]{"Virginia", "Richmond"});
+        stateCapital.add(new String[]{"Washington", "Olympia"});
+        stateCapital.add(new String[]{"West Virginia", "Charleston"});
+        stateCapital.add(new String[]{"Wisconsin", "Madison"});
+        stateCapital.add(new String[]{"Wyoming", "Cheyenne"});
+
+
+        Collections.shuffle(stateCapital);
+
+        Scanner input = new Scanner(System.in);
+        int correctCount = 0;
+
+        for (String[] stateAndCapital : stateCapital) {
+
+            System.out.print("What is the capital of " + stateAndCapital[0] + "? ");
+            String capital = input.nextLine().trim().toLowerCase();
+
+            if (capital.equals(stateAndCapital[1].toLowerCase())) {
+                System.out.println("Your answer is correct");
+                correctCount++;
+            } else {
+                System.out.println("The correct answer should be " + stateAndCapital[1]);
+            }
+        }
+
+        System.out.println("The correct count is " + correctCount);
+    }
+}
